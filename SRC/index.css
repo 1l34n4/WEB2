@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+}
+
+body {
+  background: #0a0a0a;
+  color: #d4d4d4;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: #000;
+  border-bottom: 2px solid #8b0000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h1 {
+  color: #ff1a1a;
+  text-shadow: 0 0 10px #8b0000;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+}
+
+.navbar a {
+  color: #d4d4d4;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff1a1a;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: radial-gradient(circle, #1a0000 0%, #000 100%);
+  border-bottom: 1px solid #333;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: #ff1a1a;
+  text-shadow: 0 0 20px #8b0000;
+  margin-bottom: 1rem;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+  52% { opacity: 0.5; }
+  54% { opacity: 1; }
+}
+
+.hero p {
+  color: #888;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sección casos */
+.seccion {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.seccion h2 {
+  color: #ff1a1a;
+  margin-bottom: 2rem;
+  border-left: 4px solid #8b0000;
+  padding-left: 1rem;
+}
+
+/* Cards */
+.grid-casos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.caso-card {
+  background: #111;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.caso-card:hover {
+  border-color: #ff1a1a;
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.3);
+}
+
+.caso-card h3 {
+  color: #ff1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.caso-card p {
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Formulario */
+.formulario {
+  background: #111;
+  padding: 2rem;
+  border: 1px solid #8b0000;
+  border-radius: 6px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formulario label {
+  display: block;
+  color: #aaa;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background: #000;
+  border: 1px solid #333;
+  color: #d4d4d4;
+  border-radius: 4px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #ff1a1a;
+}
+
+.formulario button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: #8b0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background: #ff1a1a;
+}
+
+.mensaje-exito {
+  color: #4ade80;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  border-top: 2px solid #8b0000;
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  margin-top: 4rem;
+}
+
+.footer .fecha {
+  color: #8b0000;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Demo TP */
+.demo-tp {
+  background: #0f0f0f;
+  border: 1px dashed #333;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.demo-tp h3 {
+  color: #ff1a1a;
+  margin-bottom: 1rem;
+  .btn-video {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #8b0000;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-video:hover {
+  background: #ff1a1a;
+  box-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
+}
+}
